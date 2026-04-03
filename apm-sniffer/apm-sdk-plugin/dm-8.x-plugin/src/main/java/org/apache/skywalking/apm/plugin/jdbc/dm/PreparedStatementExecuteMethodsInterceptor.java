@@ -42,7 +42,7 @@ public class PreparedStatementExecuteMethodsInterceptor implements InstanceMetho
             ConnectionInfo connectInfo = cacheObject.getConnectionInfo();
             AbstractSpan span = ContextManager.createExitSpan(buildOperationName(connectInfo, method.getName(), cacheObject.getStatementName()), connectInfo.getDatabasePeer());
             Tags.DB_TYPE.set(span, connectInfo.getDBType());
-            Tags.DB_INSTANCE.set(span, "DMSERVER");
+            Tags.DB_INSTANCE.set(span, connectInfo.getDatabaseName());
             Tags.DB_STATEMENT.set(span, cacheObject.getSql());
             span.setComponent((Component) connectInfo.getComponent());
             if (JDBCPluginConfig.Plugin.JDBC.TRACE_SQL_PARAMETERS) {
