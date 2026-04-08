@@ -27,7 +27,7 @@ import java.sql.Statement;
 public class SQLExecutor implements AutoCloseable {
     private Connection connection;
 
-    public SQLExecutor() throws SQLException,ClassNotFoundException {
+    public SQLExecutor() throws SQLException, ClassNotFoundException {
         try {
             Class.forName("dm.jdbc.driver.DmdbDriver");
         } catch (ClassNotFoundException e) {
