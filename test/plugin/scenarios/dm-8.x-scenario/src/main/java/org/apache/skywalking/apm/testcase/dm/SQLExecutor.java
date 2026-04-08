@@ -31,7 +31,6 @@ public class SQLExecutor implements AutoCloseable {
         try {
             Class.forName("dm.jdbc.driver.DmdbDriver");
         } catch (ClassNotFoundException e) {
-            LOGGER.error("SQLExecutor(): ", e);
             throw e;
         }
         connection = DriverManager.getConnection(DmConfig.getUrl(), DmConfig.getUserName(), DmConfig.getPassword());
