@@ -29,5 +29,4 @@ dependencies:
       - "5236"
     environment:
       - DM_USER=SYSDBA
-      - DM_PASSWORD=SYSDBA
-      - DM_DB=test
+      - DM_PASSWORD=SYSDBA_dm001
