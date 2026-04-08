@@ -60,9 +60,9 @@ public class CaseController {
     @RequestMapping("/healthCheck")
     @ResponseBody
     public String healthCheck() throws Exception {
-        try (SQLExecutor sqlExecutor = new SQLExecutor()) {
-            // ignore
-        }
+//        try (SQLExecutor sqlExecutor = new SQLExecutor()) {
+//            // ignore
+//        }
         return SUCCESS;
     }
 
