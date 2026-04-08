@@ -29,7 +29,7 @@ public class SQLExecutor implements AutoCloseable {
 
     public SQLExecutor() throws SQLException, ClassNotFoundException {
         try {
-            Class.forName("dm.jdbc.driver.DmdbDriver");
+            Class.forName("dm.jdbc.driver.DmDriver");
         } catch (ClassNotFoundException e) {
             throw e;
         }
