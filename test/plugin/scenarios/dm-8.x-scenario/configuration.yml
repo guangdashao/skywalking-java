@@ -27,12 +27,6 @@ dependencies:
     hostname: dm-server
     expose:
       - "5236"
-    healthcheck:
-      test: [ "CMD-SHELL", "echo 'select 1;' | /opt/dmdbms/bin/disql SYSDBA/SYSDBA@localhost:5236" ]
-      interval: 10s
-      timeout: 5s
-      retries: 20
-      start_period: 30s
     environment:
       - DM_USER=SYSDBA
       - DM_PASSWORD=SYSDBA_dm001
