@@ -24,7 +24,7 @@ segmentItems:
       spanId: 1
       tags:
       - {key: db.type, value: DM}
-      - {key: db.instance, value: test}
+      - {key: db.instance, value: SYSDBA}
       - key: db.statement
         value: "CREATE TABLE test_007(\nid VARCHAR(1) PRIMARY KEY, \nvalue VARCHAR(1)\
           \ NOT NULL)"
@@ -42,7 +42,7 @@ segmentItems:
       spanId: 2
       tags:
       - {key: db.type, value: DM}
-      - {key: db.instance, value: test}
+      - {key: db.instance, value: SYSDBA}
       - {key: db.statement, value: 'INSERT INTO test_007(id, value) VALUES(?,?)'}
       logs: []
       startTime: nq 0
@@ -58,7 +58,7 @@ segmentItems:
       spanId: 3
       tags:
       - {key: db.type, value: DM}
-      - {key: db.instance, value: test}
+      - {key: db.instance, value: SYSDBA}
       - {key: db.statement, value: DROP table test_007}
       logs: []
       startTime: nq 0
@@ -74,7 +74,7 @@ segmentItems:
       spanId: 4
       tags:
         - {key: db.type, value: DM}
-        - {key: db.instance, value: test}
+        - {key: db.instance, value: SYSDBA}
         - {key: db.statement, value: "create procedure testProcedure(IN id varchar(10)) \n begin \n select id; \n end"}
       logs: []
       startTime: nq 0
@@ -90,7 +90,7 @@ segmentItems:
       spanId: 5
       tags:
         - {key: db.type, value: DM}
-        - {key: db.instance, value: test}
+        - {key: db.instance, value: SYSDBA}
         - {key: db.statement, value: "call testProcedure( ? )"}
       logs: []
       startTime: nq 0
@@ -106,7 +106,7 @@ segmentItems:
       spanId: 6
       tags:
         - {key: db.type, value: DM}
-        - {key: db.instance, value: test}
+        - {key: db.instance, value: SYSDBA}
         - {key: db.statement, value: "drop procedure testProcedure"}
       logs: []
       startTime: nq 0
@@ -122,7 +122,7 @@ segmentItems:
       spanId: 7
       tags:
       - {key: db.type, value: DM}
-      - {key: db.instance, value: test}
+      - {key: db.instance, value: SYSDBA}
       - {key: db.statement, value: ''}
       logs: []
       startTime: nq 0
